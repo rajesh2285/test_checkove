@@ -1,0 +1,19 @@
+{
+  "app_name": "checkov-image",
+  "description": "checkov container image",
+  "owners": [
+    "@mmart852"
+  ],
+  "git_clone_url": "https://github.ford.com/gcp/checkov-image.git",
+  "pipeline": {
+    "namespace": "gcprt-images",
+    "cluster": "pd303.caas.gcp.ford.com",
+    "pipeline_ref": "container-image-pipeline",
+    "hook_url": "gcprt-images.apps.pd303.caas.gcp.ford.com",
+    "pipeline_parameters": {
+      "PIPELINE_URI": "https://console-openshift-console.apps.pd303.caas.gcp.ford.com/pipelines",
+      "IMAGE": "registry.ford.com/gcprelease/tf-checkov",
+      "REQUIRE_IMAGE_LATEST": "false"
+    }
+  }
+}

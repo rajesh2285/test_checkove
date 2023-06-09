@@ -1,0 +1,5 @@
+{
+  "image": "registry.ford.com/gcprelease/tf-checkov", //(your exisiting image path)
+  "require_image_latest": "false", //(will add a image:latest: if true)
+  "context": "."
+}
